@@ -2,6 +2,7 @@ import '@/index.css';
 import Navbar from '@/scenes/Navbar';
 import React from 'react';
 import { CurrentPage } from '@/shared/types';
+import Home from '@/scenes/Home';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = React.useState<CurrentPage>(CurrentPage.Home);
@@ -21,6 +22,7 @@ const App: React.FC = () => {
   return (
     <div className='app bg-gray-20'>
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} topOfPage={topOfPage} />
+      <Home setCurrentPage={setCurrentPage} />
     </div>
   );
 };
